@@ -1,18 +1,23 @@
 //Assignment 1 Monday May 11th, 2015
 // Guessing Game
 <script>
-confirm("Let's play a math game. If you don't know . . . guess. Are you ready?");
-var guess = prompt("I would like you to guess the minimal number of people do you need in a room at which you have a probabilty that two people have the same birthdate.")
-while(guess != 42) {
-	if((guess > 42-3)&&(guess <42+3)){
-		guess = prompt("You are getting hotter.");
-	} 
-	else if((guess >42-6)&&(guess <42+6)){
-		guess = prompt("You are getting warmer.");
-	}
-	else {
-		guess = prompt("Keep trying");
-	}
-}
-alert("Great, you guessed it. You win at life.")
+  var ready = confirm("Let's play a math game. If you don't know . . . guess. Are you ready?");
+  
+    if (ready){    
+    var guess = parseInt(prompt("I would like you to guess the minimal number of people do you need in a room at which you have a probabilty that two people have the same birthdate."))
+    while(guess != 42) {
+  	 if(guess > 42-3 && guess <42+3){
+  		guess = parseInt(prompt("You are getting hotter."));
+  	 } 
+  	 else if((guess >42-6)&&(guess <42+6)){
+  		guess = parseInt(prompt("You are getting warmer."));
+  	 } 
+     else { 
+      guess = parseInt(prompt("Keep trying"));
+  	 }
+    }
+      alert("Great, you guessed it. You win at life.");
+    }
+    else{}
+  
 </script>
